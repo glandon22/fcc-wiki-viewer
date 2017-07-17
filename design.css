@@ -1,0 +1,158 @@
+/* remove blue hightlight from buttons */
+*:focus {
+    outline: 0;
+    outline: none;
+}
+
+body {
+    background-color: #462066;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #00AAA0;
+}
+
+#title {
+    font-size: 6em;
+    text-align: center;
+    color: #00AAA0;
+    margin: 30px 0px 30px 0px;
+}
+
+#explanation {
+    font-size: 2em;
+    color: #FFB85F;
+    text-align: center;
+}
+
+#search-holder {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+#searchbar {
+    border: 2px solid #00AAA0;
+    border-radius: 5px;
+    height: 54px;
+    width: 300px;
+    background-color: rgba(0,0,0,0);
+    font-size: 1.5em;
+    color: #00AAA0;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+/* style the default 'X' at end of search bar*/
+#searchbar::-webkit-search-cancel-button{
+    position:relative;
+    right:20px;
+
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:1px;
+    background: #00AAA0;
+    cursor: pointer;
+}
+
+
+.buttons {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 2.5em;
+    vertical-align: top;
+    color: #F9E559;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 5px;
+}
+
+.buttons:active {
+    background-color: #00AAA0;
+}
+
+#random-button {
+    color: #FFB85F;
+    text-decoration: none;
+}
+
+/* hide my ul initially*/
+#appear {
+visibility: hidden;
+}
+
+ul.wiki-results li {
+    width: 90%;
+    background-color: #FCF4D9;
+    margin: 0px auto 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    list-style: none;
+    color: #00AAA0;
+    font-size: 1.5em;
+}
+
+ul.wiki-results li:hover {
+    background-color: rgba(252, 244, 217, 0.85);
+}
+
+ul.wiki-results li.new-search {
+    width: 10%;
+    text-align: center;
+}
+
+ul li h3 {
+    color: #FFB85F;
+    padding-top: 2px;
+    margin-top: 0px;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.wiki-results {
+    padding: 0px;
+}
+
+/*loading spinner credit to http://tobiasahlin.com/spinkit/ with slight size alteration*/
+.spinner {
+  position: absolute;
+  top: 25%;
+  left: 47%;
+  width: 100px;
+  height: 100px;
+  background-color: #FFB85F;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/*end spinner code */
+
+.new-search:hover {
+    cursor: pointer;
+}
